@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaPasteleria.Models
 {
+    [Table("Venta")]
     public class Venta
     {
         [Key]
