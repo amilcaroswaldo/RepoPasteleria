@@ -17,5 +17,7 @@ namespace SistemaPasteleria.Models
         public double Precio { get; set; }
         public double PrecioGramo { get; set; }
         public double CantidadDisponible { get; set; }
+
+        public Catalogo Catalogo{ get; set; }
     }
 }

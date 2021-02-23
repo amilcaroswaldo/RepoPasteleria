@@ -13,7 +13,11 @@ namespace SistemaPasteleria.Models
         [Key]
         public int IdListaMaterial { get; set; }
         public int IdReceta { get; set; }
+        public Receta Receta { get; set; }
         public int IdCatalogo { get; set; }
+        public Catalogo Catalogo { get; set; }
         public double Cantidad { get; set; }
+
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace SistemaPasteleria.Models
 {
@@ -14,5 +15,7 @@ namespace SistemaPasteleria.Models
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
+
+        public virtual List<ListaMaterial> ListaMaterials { get; set; }
     }
 }

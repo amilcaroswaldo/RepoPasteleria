@@ -16,5 +16,7 @@ namespace SistemaPasteleria.Models
         [Required]
         public string Nombre { get; set; }
 
+        public virtual List<Material> Materials { get; set; }
+
     }
 }
