@@ -37,6 +37,8 @@ namespace SistemaPasteleria.Forms
 
             db.Materials.Add(material);
             db.SaveChangesAsync();
+            MetroFramework.MetroMessageBox.Show(this, "Se ha agregado correctamente");
+
             loadData();
             cleanInputs();
 

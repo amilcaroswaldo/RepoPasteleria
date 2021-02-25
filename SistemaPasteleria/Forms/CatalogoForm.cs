@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -117,7 +118,7 @@ namespace SistemaPasteleria.Forms
         {
             Models.Catalogo catalogo = catalogoBindingSource.Current as Models.Catalogo;
             using (DBContext context = new DBContext()) {
-                context.Entry<Models.Catalogo>(catalogo).State = System.Data.Entity.EntityState.Modified;
+                context.Entry<Models.Catalogo>(catalogo).State = EntityState.Modified;
                 context.SaveChangesAsync();
                 MetroFramework.MetroMessageBox.Show(this, "El dato se ha actualizado correctamente");
                 dgDatos.Refresh();
