@@ -20,5 +20,9 @@ namespace SistemaPasteleria.Models
 
         public virtual List<Material> Materials { get; set; }
 
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }
