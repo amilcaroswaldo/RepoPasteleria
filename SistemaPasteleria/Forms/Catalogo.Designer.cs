@@ -28,127 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtIdCatalogo = new System.Windows.Forms.TextBox();
-            this.bindingSourceCatalogo = new System.Windows.Forms.BindingSource(this.components);
             this.txtCatalogo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtIdMateria = new System.Windows.Forms.TextBox();
+            this.txtcantInicial = new System.Windows.Forms.TextBox();
+            this.txtIdCata2 = new System.Windows.Forms.TextBox();
+            this.txtPrecioFin = new System.Windows.Forms.TextBox();
+            this.txtprecioGr = new System.Windows.Forms.TextBox();
+            this.txtCantFIn = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvReceta = new System.Windows.Forms.DataGridView();
-            this.idMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCatalogoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioGramoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDisponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceMaterial = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCatalogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.id_catalogo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceMaterial)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdCatalogo
             // 
-            this.txtIdCatalogo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCatalogo, "IdCatalogo", true));
-            this.txtIdCatalogo.Location = new System.Drawing.Point(20, 2);
-            this.txtIdCatalogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdCatalogo.Location = new System.Drawing.Point(51, 8);
+            this.txtIdCatalogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdCatalogo.Name = "txtIdCatalogo";
-            this.txtIdCatalogo.Size = new System.Drawing.Size(58, 20);
+            this.txtIdCatalogo.Size = new System.Drawing.Size(76, 22);
             this.txtIdCatalogo.TabIndex = 1;
-            this.txtIdCatalogo.Text = "idCatalogo";
-            // 
-            // bindingSourceCatalogo
-            // 
-            this.bindingSourceCatalogo.DataSource = typeof(SistemaPasteleria.Models.Catalogo);
+            this.txtIdCatalogo.TextChanged += new System.EventHandler(this.txtIdCatalogo_TextChanged);
             // 
             // txtCatalogo
             // 
-            this.txtCatalogo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCatalogo, "Nombre", true));
-            this.txtCatalogo.Location = new System.Drawing.Point(208, 2);
-            this.txtCatalogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCatalogo.Location = new System.Drawing.Point(270, 8);
+            this.txtCatalogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCatalogo.Name = "txtCatalogo";
-            this.txtCatalogo.Size = new System.Drawing.Size(144, 20);
+            this.txtCatalogo.Size = new System.Drawing.Size(191, 22);
             this.txtCatalogo.TabIndex = 2;
-            this.txtCatalogo.Text = "Nombre receta";
             // 
-            // textBox1
+            // txtIdMateria
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialBindingSource, "IdMaterial", true));
-            this.textBox1.Location = new System.Drawing.Point(376, 2);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(66, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "idMaterial";
+            this.txtIdMateria.Location = new System.Drawing.Point(92, 45);
+            this.txtIdMateria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdMateria.Name = "txtIdMateria";
+            this.txtIdMateria.Size = new System.Drawing.Size(87, 22);
+            this.txtIdMateria.TabIndex = 4;
             // 
-            // materialBindingSource
+            // txtcantInicial
             // 
-            this.materialBindingSource.DataSource = typeof(SistemaPasteleria.Models.Material);
+            this.txtcantInicial.Location = new System.Drawing.Point(101, 84);
+            this.txtcantInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcantInicial.Name = "txtcantInicial";
+            this.txtcantInicial.Size = new System.Drawing.Size(87, 22);
+            this.txtcantInicial.TabIndex = 5;
             // 
-            // textBox3
+            // txtIdCata2
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialBindingSource, "IdCatalogo", true));
-            this.textBox3.Location = new System.Drawing.Point(20, 38);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(66, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "idCatalogo";
+            this.txtIdCata2.Location = new System.Drawing.Point(301, 45);
+            this.txtIdCata2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdCata2.Name = "txtIdCata2";
+            this.txtIdCata2.Size = new System.Drawing.Size(100, 22);
+            this.txtIdCata2.TabIndex = 6;
             // 
-            // textBox4
+            // txtPrecioFin
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialBindingSource, "CantidadInicial", true));
-            this.textBox4.Location = new System.Drawing.Point(226, 25);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(76, 20);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "Cantidad inicial";
+            this.txtPrecioFin.Location = new System.Drawing.Point(301, 115);
+            this.txtPrecioFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrecioFin.Name = "txtPrecioFin";
+            this.txtPrecioFin.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioFin.TabIndex = 7;
             // 
-            // textBox5
+            // txtprecioGr
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialBindingSource, "Precio", true));
-            this.textBox5.Location = new System.Drawing.Point(367, 25);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(76, 20);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.Text = "Precio";
+            this.txtprecioGr.Location = new System.Drawing.Point(101, 110);
+            this.txtprecioGr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtprecioGr.Name = "txtprecioGr";
+            this.txtprecioGr.Size = new System.Drawing.Size(100, 22);
+            this.txtprecioGr.TabIndex = 8;
+            this.txtprecioGr.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox6
+            // txtCantFIn
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialBindingSource, "PrecioGramo", true));
-            this.textBox6.Location = new System.Drawing.Point(20, 61);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(76, 20);
-            this.textBox6.TabIndex = 8;
-            this.textBox6.Text = "Precio Grama";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // textBox7
-            // 
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialBindingSource, "CantidadDisponible", true));
-            this.textBox7.Location = new System.Drawing.Point(226, 61);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(76, 20);
-            this.textBox7.TabIndex = 9;
-            this.textBox7.Text = "Cantidad disponible";
+            this.txtCantFIn.Location = new System.Drawing.Point(301, 87);
+            this.txtCantFIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantFIn.Name = "txtCantFIn";
+            this.txtCantFIn.Size = new System.Drawing.Size(100, 22);
+            this.txtCantFIn.TabIndex = 9;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(20, 112);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(16, 170);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(97, 22);
+            this.btnAgregar.Size = new System.Drawing.Size(129, 27);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar Receta";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -156,124 +132,177 @@
             // 
             // dgvReceta
             // 
-            this.dgvReceta.AutoGenerateColumns = false;
             this.dgvReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReceta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMaterialDataGridViewTextBoxColumn,
-            this.idCatalogoDataGridViewTextBoxColumn,
-            this.cantidadInicialDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn,
-            this.precioGramoDataGridViewTextBoxColumn,
-            this.cantidadDisponibleDataGridViewTextBoxColumn});
-            this.dgvReceta.DataSource = this.materialBindingSource;
-            this.dgvReceta.Location = new System.Drawing.Point(9, 251);
-            this.dgvReceta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_catalogo,
+            this.ID_Material,
+            this.CantidadInicial,
+            this.CantidadDisponible});
+            this.dgvReceta.Location = new System.Drawing.Point(12, 218);
+            this.dgvReceta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvReceta.Name = "dgvReceta";
             this.dgvReceta.RowHeadersWidth = 51;
             this.dgvReceta.RowTemplate.Height = 24;
-            this.dgvReceta.Size = new System.Drawing.Size(602, 122);
+            this.dgvReceta.Size = new System.Drawing.Size(803, 168);
             this.dgvReceta.TabIndex = 11;
             // 
-            // idMaterialDataGridViewTextBoxColumn
+            // label1
             // 
-            this.idMaterialDataGridViewTextBoxColumn.DataPropertyName = "IdMaterial";
-            this.idMaterialDataGridViewTextBoxColumn.HeaderText = "IdMaterial";
-            this.idMaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idMaterialDataGridViewTextBoxColumn.Name = "idMaterialDataGridViewTextBoxColumn";
-            this.idMaterialDataGridViewTextBoxColumn.Width = 125;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // idCatalogoDataGridViewTextBoxColumn
+            // label2
             // 
-            this.idCatalogoDataGridViewTextBoxColumn.DataPropertyName = "IdCatalogo";
-            this.idCatalogoDataGridViewTextBoxColumn.HeaderText = "IdCatalogo";
-            this.idCatalogoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idCatalogoDataGridViewTextBoxColumn.Name = "idCatalogoDataGridViewTextBoxColumn";
-            this.idCatalogoDataGridViewTextBoxColumn.Width = 125;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(150, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Nombre receta";
             // 
-            // cantidadInicialDataGridViewTextBoxColumn
+            // label3
             // 
-            this.cantidadInicialDataGridViewTextBoxColumn.DataPropertyName = "CantidadInicial";
-            this.cantidadInicialDataGridViewTextBoxColumn.HeaderText = "CantidadInicial";
-            this.cantidadInicialDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadInicialDataGridViewTextBoxColumn.Name = "cantidadInicialDataGridViewTextBoxColumn";
-            this.cantidadInicialDataGridViewTextBoxColumn.Width = 125;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Cantiad inicial";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // precioDataGridViewTextBoxColumn
+            // label4
             // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.Width = 125;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Precio Gramo";
             // 
-            // precioGramoDataGridViewTextBoxColumn
+            // label5
             // 
-            this.precioGramoDataGridViewTextBoxColumn.DataPropertyName = "PrecioGramo";
-            this.precioGramoDataGridViewTextBoxColumn.HeaderText = "PrecioGramo";
-            this.precioGramoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precioGramoDataGridViewTextBoxColumn.Name = "precioGramoDataGridViewTextBoxColumn";
-            this.precioGramoDataGridViewTextBoxColumn.Width = 125;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "id material";
             // 
-            // cantidadDisponibleDataGridViewTextBoxColumn
+            // label6
             // 
-            this.cantidadDisponibleDataGridViewTextBoxColumn.DataPropertyName = "CantidadDisponible";
-            this.cantidadDisponibleDataGridViewTextBoxColumn.HeaderText = "CantidadDisponible";
-            this.cantidadDisponibleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDisponibleDataGridViewTextBoxColumn.Name = "cantidadDisponibleDataGridViewTextBoxColumn";
-            this.cantidadDisponibleDataGridViewTextBoxColumn.Width = 125;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(218, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "id catalogo";
             // 
-            // bindingSourceMaterial
+            // label7
             // 
-            this.bindingSourceMaterial.DataSource = typeof(SistemaPasteleria.Models.Material);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(218, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 17);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Precio";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(218, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 17);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Cantidad final";
+            // 
+            // id_catalogo
+            // 
+            this.id_catalogo.HeaderText = "ID Receta";
+            this.id_catalogo.MinimumWidth = 6;
+            this.id_catalogo.Name = "id_catalogo";
+            this.id_catalogo.Width = 125;
+            // 
+            // ID_Material
+            // 
+            this.ID_Material.HeaderText = "ID Detalle";
+            this.ID_Material.MinimumWidth = 6;
+            this.ID_Material.Name = "ID_Material";
+            this.ID_Material.Width = 125;
+            // 
+            // CantidadInicial
+            // 
+            this.CantidadInicial.HeaderText = "Cantidad Inicial";
+            this.CantidadInicial.MinimumWidth = 6;
+            this.CantidadInicial.Name = "CantidadInicial";
+            this.CantidadInicial.Width = 125;
+            // 
+            // CantidadDisponible
+            // 
+            this.CantidadDisponible.HeaderText = "Cantidad Disponible";
+            this.CantidadDisponible.MinimumWidth = 6;
+            this.CantidadDisponible.Name = "CantidadDisponible";
+            this.CantidadDisponible.Width = 125;
             // 
             // Catalogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 392);
+            this.ClientSize = new System.Drawing.Size(837, 403);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvReceta);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCantFIn);
+            this.Controls.Add(this.txtprecioGr);
+            this.Controls.Add(this.txtPrecioFin);
+            this.Controls.Add(this.txtIdCata2);
+            this.Controls.Add(this.txtcantInicial);
+            this.Controls.Add(this.txtIdMateria);
             this.Controls.Add(this.txtCatalogo);
             this.Controls.Add(this.txtIdCatalogo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Catalogo";
             this.Text = "Catalogo";
             this.Load += new System.EventHandler(this.Catalogo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCatalogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceMaterial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource bindingSourceCatalogo;
-        private System.Windows.Forms.BindingSource bindingSourceMaterial;
         private System.Windows.Forms.TextBox txtIdCatalogo;
         private System.Windows.Forms.TextBox txtCatalogo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtIdMateria;
+        private System.Windows.Forms.TextBox txtcantInicial;
+        private System.Windows.Forms.TextBox txtIdCata2;
+        private System.Windows.Forms.TextBox txtPrecioFin;
+        private System.Windows.Forms.TextBox txtprecioGr;
+        private System.Windows.Forms.TextBox txtCantFIn;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvReceta;
-        private System.Windows.Forms.BindingSource materialBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMaterialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCatalogoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadInicialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioGramoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDisponibleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_catalogo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadInicial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDisponible;
     }
 }
