@@ -38,13 +38,15 @@ namespace SistemaPasteleria.Forms
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Models.Catalogo newCatalogo = getInformation();
+            Models.Material newMaterial = getMaterial(newCatalogo);
 
             if (!string.IsNullOrEmpty(newCatalogo.Nombre))
             {
                 using (DBContext db = new DBContext())
                 {
-                    //Para almacenar el dato en la base de datos
+                    //Para crear encabezado de materia prima
                     db.Catalogos.Add(newCatalogo);
+                    db.Materials.Add(newMaterial);
                     db.SaveChangesAsync();
 
                     //Notificar que el dato se aguardo correctamente
@@ -65,6 +67,17 @@ namespace SistemaPasteleria.Forms
             return catalogo;
         }
 
+        private Models.Material getMaterial(Models.Catalogo cat)
+        {
+            Models.Material material = new Models.Material();
+            //material.IdCatalogo = Convert.ToInt32(txtId.Text.Trim());
+            material.Catalogo = cat;
+            material.CantidadDisponible = Convert.ToDouble(txtCantidadDisp.Text.Trim());
+            material.CantidadInicial = Convert.ToDouble(txtCantidadInicial.Text.Trim());
+            material.Precio = Convert.ToDouble(txtPrecioTotal.Text.Trim());
+            material.PrecioGramo = Convert.ToDouble(txtPrecioGr.Text.Trim());
+            return material;
+        }
         private void loadData(string busqueda = null)
         {
             using (DBContext db = new DBContext())
@@ -72,11 +85,13 @@ namespace SistemaPasteleria.Forms
                 if (string.IsNullOrEmpty(busqueda))
                 {
                     catalogoBindingSource.DataSource = db.Catalogos.ToList();
+                    materialBindingSource.DataSource = db.Materials.ToList();
 
                 }
                 else {
                     //Funcion para buscar y cargar los datos de la busqueda en el grid
-                    catalogoBindingSource.DataSource = db.Catalogos.Where(x => x.Nombre.ToLower().Contains(busqueda.ToLower())).ToList();
+                  //  catalogoBindingSource.DataSource = db.Catalogos.Where(x => x.Nombre.ToLower().Contains(busqueda.ToLower())).ToList();
+                    materialBindingSource.DataSource = db.Catalogos.Where(x => x.Nombre.ToLower().Contains(busqueda.ToLower())).ToList();
                 }
             }
         }
@@ -86,23 +101,27 @@ namespace SistemaPasteleria.Forms
             btnUpdate.Enabled = true;
             btnAgregar.Enabled = false;
             btnCancel.Enabled = true;
+            DBContext db = new DBContext();
+            catalogoBindingSource.DataSource = db.Catalogos.Where(x => x.Nombre.ToLower().Contains(txtNombre.Text)).ToList();
         }
 
         public void cleanInputs() {
 
             //Se mueve al ultimo dato de la tabla
-            catalogoBindingSource.MoveLast();
+            materialBindingSource.MoveLast();
             //Se obtiene el valor del ultimo dato de la tabla
             Models.Catalogo obj = catalogoBindingSource.Current as Models.Catalogo;
+            Models.Material obj2 = materialBindingSource.Current as Models.Material;
 
             //Se pregunta si es un objeto de base de datos o es uno vacio
             if (obj.IdCatalogo != 0)
             {
                 //De ser un objeto de la base de datos, se agrega un nuevo objeto vacio
                 catalogoBindingSource.Add(new Models.Catalogo());
-
+                materialBindingSource.Add(new Models.Material());
                 //Y se mueve a dicho objeto.
-                catalogoBindingSource.MoveLast();               
+                catalogoBindingSource.MoveLast();
+                materialBindingSource.MoveLast();
             }         
             btnUpdate.Enabled = false;
             btnAgregar.Enabled = true;
@@ -116,13 +135,16 @@ namespace SistemaPasteleria.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Models.Catalogo catalogo = catalogoBindingSource.Current as Models.Catalogo;
+            //es recomondable usar otro contexto, aun asi no me funciono
+            //Models.Catalogo catalogo = catalogoBindingSource.Current as Models.Catalogo;
+            Models.Material material = materialBindingSource.Current as Models.Material;
             using (DBContext context = new DBContext()) {
-                context.Entry<Models.Catalogo>(catalogo).State = EntityState.Modified;
+                context.Entry<Models.Material>(material).State = EntityState.Modified;
+              //  context.Entry<Models.Catalogo>(catalogo).State = EntityState.Modified;
                 context.SaveChangesAsync();
                 MetroFramework.MetroMessageBox.Show(this, "El dato se ha actualizado correctamente");
                 dgDatos.Refresh();
-                cleanInputs();
+              //  cleanInputs();
 
             }
         }
