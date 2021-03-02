@@ -17,7 +17,7 @@ namespace SistemaPasteleria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RecetaForm());
+            Application.Run(new VentasForm());
         }
     }
 }

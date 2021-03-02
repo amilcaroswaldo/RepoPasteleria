@@ -145,6 +145,12 @@
     <Compile Include="Forms\RecetaForm.Designer.cs">
       <DependentUpon>RecetaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VentasForm.Designer.cs">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202102231717220_Initial-Migration.cs" />
     <Compile Include="Migrations\202102231717220_Initial-Migration.designer.cs">
       <DependentUpon>202102231717220_Initial-Migration.cs</DependentUpon>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RecetaForm.resx">
       <DependentUpon>RecetaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VentasForm.resx">
+      <DependentUpon>VentasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102231717220_Initial-Migration.resx">
       <DependentUpon>202102231717220_Initial-Migration.cs</DependentUpon>
