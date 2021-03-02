@@ -153,11 +153,20 @@
     <Compile Include="Migrations\202102231724086_Changed-Table-Name.designer.cs">
       <DependentUpon>202102231724086_Changed-Table-Name.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103011706495_Agregando-tabla-unidad.cs" />
+    <Compile Include="Migrations\202103011706495_Agregando-tabla-unidad.designer.cs">
+      <DependentUpon>202103011706495_Agregando-tabla-unidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103011841400_Agregando-llaves-foraneas.cs" />
+    <Compile Include="Migrations\202103011841400_Agregando-llaves-foraneas.designer.cs">
+      <DependentUpon>202103011841400_Agregando-llaves-foraneas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\MaterialReceta.cs" />
     <Compile Include="Models\ListaMaterial.cs" />
     <Compile Include="Models\Receta.cs" />
+    <Compile Include="Models\Unidad.cs" />
     <Compile Include="Models\Venta.cs" />
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\Catalogo.cs" />
@@ -181,6 +190,12 @@
     <EmbeddedResource Include="Migrations\202102231724086_Changed-Table-Name.resx">
       <DependentUpon>202102231724086_Changed-Table-Name.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103011706495_Agregando-tabla-unidad.resx">
+      <DependentUpon>202103011706495_Agregando-tabla-unidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103011841400_Agregando-llaves-foraneas.resx">
+      <DependentUpon>202103011841400_Agregando-llaves-foraneas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -192,8 +207,10 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SistemaPasteleria.Models.Catalogo.datasource" />
+    <None Include="Properties\DataSources\SistemaPasteleria.Models.ListaMaterial.datasource" />
     <None Include="Properties\DataSources\SistemaPasteleria.Models.Material.datasource" />
     <None Include="Properties\DataSources\SistemaPasteleria.Models.Receta.datasource" />
+    <None Include="Properties\DataSources\SistemaPasteleria.Models.Unidad.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

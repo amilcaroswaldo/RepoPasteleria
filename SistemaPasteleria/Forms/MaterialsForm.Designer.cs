@@ -40,8 +40,12 @@ namespace SistemaPasteleria.Forms
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioGramoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDisponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.unidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,6 +63,7 @@ namespace SistemaPasteleria.Forms
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +91,8 @@ namespace SistemaPasteleria.Forms
             this.cantidadInicialDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
             this.precioGramoDataGridViewTextBoxColumn,
-            this.cantidadDisponibleDataGridViewTextBoxColumn});
+            this.cantidadDisponibleDataGridViewTextBoxColumn,
+            this.Unidad});
             this.metroGrid1.DataSource = this.materialBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -115,7 +121,7 @@ namespace SistemaPasteleria.Forms
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(1062, 252);
+            this.metroGrid1.Size = new System.Drawing.Size(1186, 252);
             this.metroGrid1.TabIndex = 0;
             this.metroGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellClick);
             // 
@@ -173,12 +179,23 @@ namespace SistemaPasteleria.Forms
             this.cantidadDisponibleDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDisponibleDataGridViewTextBoxColumn.Width = 125;
             // 
+            // Unidad
+            // 
+            this.Unidad.DataPropertyName = "Unidad";
+            this.Unidad.HeaderText = "Unidad";
+            this.Unidad.MinimumWidth = 6;
+            this.Unidad.Name = "Unidad";
+            this.Unidad.ReadOnly = true;
+            this.Unidad.Width = 125;
+            // 
             // materialBindingSource
             // 
             this.materialBindingSource.DataSource = typeof(SistemaPasteleria.Models.Material);
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.label5);
+            this.metroPanel1.Controls.Add(this.metroComboBox1);
             this.metroPanel1.Controls.Add(this.label3);
             this.metroPanel1.Controls.Add(this.label2);
             this.metroPanel1.Controls.Add(this.label1);
@@ -200,6 +217,33 @@ namespace SistemaPasteleria.Forms
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 221);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 17);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Unidad:";
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.materialBindingSource, "Unidad", true));
+            this.metroComboBox1.DataSource = this.unidadBindingSource;
+            this.metroComboBox1.DisplayMember = "Nombre";
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.Location = new System.Drawing.Point(191, 209);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(184, 30);
+            this.metroComboBox1.TabIndex = 12;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.ValueMember = "IdUnidad";
+            // 
+            // unidadBindingSource
+            // 
+            this.unidadBindingSource.DataSource = typeof(SistemaPasteleria.Models.Unidad);
             // 
             // label3
             // 
@@ -231,7 +275,7 @@ namespace SistemaPasteleria.Forms
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(191, 232);
+            this.metroButton1.Location = new System.Drawing.Point(191, 255);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(169, 23);
             this.metroButton1.TabIndex = 8;
@@ -455,7 +499,7 @@ namespace SistemaPasteleria.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 723);
+            this.ClientSize = new System.Drawing.Size(1307, 723);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.htmlLabel1);
@@ -468,6 +512,7 @@ namespace SistemaPasteleria.Forms
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -499,5 +544,9 @@ namespace SistemaPasteleria.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDisponibleDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
+        private System.Windows.Forms.Label label5;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private System.Windows.Forms.BindingSource unidadBindingSource;
     }
 }

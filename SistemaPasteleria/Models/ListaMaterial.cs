@@ -20,6 +20,9 @@ namespace SistemaPasteleria.Models
         public Catalogo Catalogo { get; set; }
         public double Cantidad { get; set; }
 
+        public int IdUnidad { get; set; }
+        public Unidad Unidad { get; set; }
+
 
     }
 }

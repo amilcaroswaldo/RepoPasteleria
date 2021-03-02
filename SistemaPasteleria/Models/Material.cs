@@ -21,5 +21,8 @@ namespace SistemaPasteleria.Models
         public double CantidadDisponible { get; set; }
 
         public Catalogo Catalogo{ get; set; }
+
+        public int IdUnidad { get; set; }
+        public Unidad Unidad { get; set; }
     }
 }

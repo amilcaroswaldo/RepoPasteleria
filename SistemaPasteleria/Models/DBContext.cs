@@ -23,5 +23,6 @@ namespace SistemaPasteleria.Models
         public DbSet<Receta> Recetas { get; set; }
         public DbSet<MaterialReceta> MaterialRecetas { get; set; }
         public DbSet<Venta> Ventas { get; set; }
+        public DbSet<Unidad> Unidades { get; set; }
     }
 }

@@ -24,8 +24,43 @@ namespace SistemaPasteleria.Forms
         {
             catalogoBindingSource.DataSource = db.Catalogos.OrderBy(x => x.Nombre).ToList();
 
+            loadUnidad();
+
             loadData();
             cleanInputs();
+        }
+
+        private void loadUnidad()
+        {
+            var listUnidad = db.Unidades.ToList();
+            if (listUnidad.Count == 0)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    Unidad unidad = new Unidad();
+                    switch (i)
+                    {
+                        case 0:
+                            unidad.Nombre = "Gramos";
+                            break;
+                        case 1:
+                            unidad.Nombre = "Miligramos";
+                            break;
+                        case 2:
+                            unidad.Nombre = "Onzas";
+                            break;
+                        default:
+                            break;
+                    }
+                    db.Unidades.Add(unidad);
+                    db.SaveChangesAsync();
+                }
+
+                unidadBindingSource.DataSource = db.Unidades.ToList();
+            }
+            else {
+                unidadBindingSource.DataSource = listUnidad;
+            }
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
