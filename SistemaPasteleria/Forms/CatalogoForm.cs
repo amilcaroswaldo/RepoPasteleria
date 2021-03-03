@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace SistemaPasteleria.Forms
 {
-    public partial class CatalogoForm : MetroFramework.Forms.MetroForm
+    public partial class CatalogoForm : Form
     {
         public CatalogoForm()
         {

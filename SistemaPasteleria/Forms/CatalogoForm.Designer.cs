@@ -658,6 +658,7 @@ namespace SistemaPasteleria.Forms
             this.Controls.Add(this.htmlLabel2);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.dgDatos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CatalogoForm";
             this.Text = "CatalogoForm";
             this.Load += new System.EventHandler(this.CatalogoForm_Load);
