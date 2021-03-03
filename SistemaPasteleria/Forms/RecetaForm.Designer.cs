@@ -582,6 +582,7 @@ namespace SistemaPasteleria.Forms
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnActualizar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RecetaForm";
             this.Text = "RecetaForm";
             this.Load += new System.EventHandler(this.RecetaForm_Load);

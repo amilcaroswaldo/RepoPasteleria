@@ -505,6 +505,7 @@ namespace SistemaPasteleria.Forms
             this.Controls.Add(this.htmlLabel1);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroGrid1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MaterialsForm";
             this.Text = "MaterialsForm";
             this.Load += new System.EventHandler(this.MaterialsForm_Load);

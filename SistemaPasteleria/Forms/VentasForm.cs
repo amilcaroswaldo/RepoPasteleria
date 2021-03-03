@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace SistemaPasteleria.Forms
 {
-    public partial class VentasForm : MetroFramework.Forms.MetroForm
+    public partial class VentasForm : Form
     {
         DBContext db;
         public VentasForm()

@@ -12,7 +12,7 @@ using System.Data.Entity;
 
 namespace SistemaPasteleria.Forms
 {
-    public partial class RecetaForm : MetroFramework.Forms.MetroForm
+    public partial class RecetaForm : Form
     {
         DBContext db;
         public RecetaForm()

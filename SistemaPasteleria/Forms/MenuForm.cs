@@ -105,6 +105,21 @@ namespace SistemaPasteleria.Forms
             AbrirFormularios<CatalogoForm>();
         }
 
+        private void btnShowVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<VentasForm>();
+        }
+
+        private void btnShowRecetas_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<RecetaForm>();
+        }
+
+        private void btnShowMateriales_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<MaterialsForm>();
+        }
+
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             lx = Location.X;
@@ -122,6 +137,8 @@ namespace SistemaPasteleria.Forms
         private void AbrirFormularios<FormularioAbrir>() where FormularioAbrir : Form, new() 
         {
             Form Formualrios;
+
+            pnlContenedor.Controls.Clear();
 
             Formualrios = pnlContenedor.Controls.OfType<FormularioAbrir>().FirstOrDefault();
 
